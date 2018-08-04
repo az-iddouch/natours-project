@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "a landing page for the sake of practicing advanced css concepts",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass" : "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/az-iddouch/natours-project.git"
+  },
+  "author": "abdelaziz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/az-iddouch/natours-project/issues"
+  },
+  "homepage": "https://github.com/az-iddouch/natours-project#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
