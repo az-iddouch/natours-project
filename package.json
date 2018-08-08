@@ -4,7 +4,7 @@
   "description": "a landing page for the sake of practicing advanced css concepts",
   "main": "index.js",
   "scripts": {
-    "compile:sass" : "node-sass sass/main.scss css/style.css -w"
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/az-iddouch/natours-project#readme",
   "devDependencies": {
-    "node-sass": "^4.9.2"
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
   }
 }
