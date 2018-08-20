@@ -322,7 +322,16 @@
 
             <footer class="footer">
                 <div class="footer__logo-box">
-                    <img src="img/logo-green-2x.png" alt="full logo" class="footer__logo">
+
+                    <picture class="footer__logo">
+                        <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                            <!-- the fall back -->
+                        <img srcset="img/logo-green-1x.png 1x,img/logo-green-2x.png 2x" alt="full logo" class="footer__logo">
+                    </picture>
+
+
+                    <!-- allows the browser to choose between the images , according to the screen used by user to display the image (high density like Retina or normal screens)-->
+                    <!-- <img srcset="img/logo-green-1x.png 1x,img/logo-green-2x.png 2x" alt="full logo" class="footer__logo"> -->
                 </div>
 
                 <div class="row">

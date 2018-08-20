@@ -20,11 +20,23 @@
         overflow: hidden;
         transform: translate(-50%, -50%) scale(.5);
         transition: all .3s;
+
+        @include respond(tab-land){
+            display: block;
+            width: 80%;
+        }
     }
 
     &__left {
         width: 33.33333%;
         display: table-cell;
+
+        @include respond(tab-land){
+            width: 100%;
+            height: 20rem;
+            display: block;
+        }
+        
     }
 
     &__right {
@@ -32,11 +44,28 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-land){
+            width: 100%;
+            // height: 75%;
+            display: block;
+
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include respond(tab-land){
+            width: 50%;
+            height: 100%;
+            display: inline-block;
+            float: left;
+            // @include clearfix;
+        }
+
+        
     }
 
     &__text {
