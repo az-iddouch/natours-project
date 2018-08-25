@@ -10,7 +10,7 @@
     transform: skewX(-12deg);
 
     @include respond(tab-port) {
-        width: 100%; 
+        width: 100%;
         padding: 4rem;
         padding-left: 7rem;
     }
@@ -23,13 +23,19 @@
         width: 15rem;
         height: 15rem;
         float: left;
-        //to make the text float around the circle ps : it has to have all the above 
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        //to make the shape a circle
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
+        overflow: hidden;
+        border-radius: 50%;
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            //to make the text float around the circle ps : it has to have all the above
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            //to make the shape a circle
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            border-radius: none;
+        }
 
         @include respond(phone) {
             transform: translateX(-3rem) skewX(0);
@@ -68,10 +74,10 @@
         opacity: 1;
         transform: translate(-50%, -50%);
     }
-    
+
     &:hover &__img {
         transform: translateX(-4rem) scale(1);
         filter: blur(3px) brightness(80%);  // for brightness .. value above 100% makes brighter and value less than 100% makes it darker
-        
+
     }
 }
